@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #599fd9;
+    background-image: linear-gradient(135.9deg, rgba(109,25,252,1)16.4%,rgba(125,31,165,1)56.1%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    top: 22%;
+    left: 64%;
+    position: absolute;
+}
+
+.search-box {
+    border-radius: 50px;
+    background: white;
+    border: 2px solid white;
+}
+
+form {
+    margin: 0px;
+}
+
+input {
+    border: none;
+    margin: 10px 5px 10px 0px;
+    font-size: 20px;
+    outline: none;
+    color: gray;
+}
+
+i {
+    font-size: 20px;
+    margin: 0px 6px;
+    color: #085f63;
+}
+
+    i:hover {
+        color: green;
+    }
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0,0.1);
+    transition: all 0,4s;
+}
+
+.page-content{
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0,4s;
+}
+
+#sidebar.active {
+    margin-left: -17rem;
+}
+
+#content-active {
+    width: 100%;
+    margin: 0;
+}
+
+.separator {
+    margin: 3rem 0;
+    border-bottom: 1px dashed floralwhite;
+}
+
+.text-uppercase {
+    letter-spacing: 0.1rem;
+}
+
+.nav-link {
+    text-transform: capitalize;
+}
+
+    .nav-link:hover {
+        background: #706e6e;
+    }
+
+.text-primary {
+    color: #7579e7;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    padding-left: 10px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+    .navbar-nav li a {
+        color: rgb(238, 230, 230) !important;
+        font-weight: 700;
+        float: right;
+        text-align: left;
+    }
+
+.datetime {
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width: 170px;
+    font-weight: 700;
+    padding: -15px -10px;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}

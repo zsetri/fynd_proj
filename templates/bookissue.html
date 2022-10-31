@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Admin Profile</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/bookissue.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{{url_for('static',filename='JS/bookissue.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+<body onload="initClock()">
+    
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='prof/logo.jpg')}}"></a>
+          <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <p class="font-weight-normal text-muted "><div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>,
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minute">00</span>:
+                    <span id="seconds">00</span>-
+                    <span id="period">AM</span>
+                </div>
+                
+            </div></p>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/login/admin">Home</a>
+              </li>
+              
+                 <div class="container">
+                     <form action="" method="" id="search-form" target="_blank">        
+             <ul class="search-box">
+                  <button type="submit"><i class="fa fa-microphone"></i></button>
+                  <input type="text" placeholder="Search...."/>
+                  <button type="submit"><i class="fa fa-search"></i></button>
+
+              </ul>
+              </form>
+</div>
+
+          
+          
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  More
+                </a>
+                <div class="dropdown-menu" style="background-color: #5f1782">
+                  <a class="dropdown-item"  href="/login/profile/stuprof">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+       
+    </div>
+</div>
+</div>
+
+
+      </nav>
+    
+  
+  
+<!--SIDEBAR-->
+               
+
+<!--page content-->
+
+<div class="page-content p-4" id="content">
+        
+        <form class="needs-validation" action="/login/admin/bkissue/Issue" method="post" autocomplete="off" novalidate>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputStudentId">Student ID</label>
+                <input type="text" class="form-control" id="inputStudentId" placeholder="Student Id" name="stid" required>
+                <div class="valid-feedback">
+                    valid
+                </div>
+              </div>
+              
+              <div class="form-group col-md-6 ">                         
+                <label for="inputStudentID">Book ID</label>                    
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="inputBookId" placeholder="Book ID" name="bookid" required>
+                <div class="valid-feedback">
+                    valid
+                </div>
+              </div>
+            </div>
+            <div class="startdate form-group col-md-4 ">
+                <label for="start">Start date :</label>
+                <input type="date" id="dp1" name="trip-start" value="" min="2021-01-01"  >              
+            </div>  
+            <div class="enddate form-group col-md-6 ">
+                <label for="start">End date :</label>
+                <input type="date" id="dp1" name="trip-end" value="" min="2021-01-01"  >              
+            </div>   
+          
+              <div class="b1 form-group col-md-4">
+            <input type="submit" class="btn btn-danger" name="Issue" value="Issue"required >
+            </div>
+            <div class="b2 form-group col-md-4">
+              <input type="submit" class="btn btn-info" name="Return" value="Return" formaction="/login/admin/bkissue/Return" required>
+              </div>
+
+          </form>
+          
+          
+      </div>
+
+    </body>    
+</html>

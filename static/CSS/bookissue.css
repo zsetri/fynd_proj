@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: #599fd9;
+    background-image: linear-gradient(135.9deg, rgba(109,25,252,1)16.4%,rgba(125,31,165,1)56.1%);
+    min-height: 200vh;
+    overflow: hidden;
+    
+}
+.container{
+    top: 22%;
+    left: 64%;
+    
+    position: absolute;
+}
+.search-box{
+    border-radius: 50px;
+    background: white;
+    border: 2px solid white;
+}
+form{
+    margin: 0px;
+    display: inline-block;
+    color: ivory;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+    font-weight: 700;
+}
+
+.enddate input{
+    margin: .4rem 0;
+    display: inline;
+    align-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+}
+.startdate input {
+    margin: .5rem 0;
+    display: inline;
+    align-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+}
+input{
+    border: none;
+    margin: 10px 5px 10px 0px;
+    font-size: 20px;
+    outline: none;
+    color: rgb(26, 25, 25);
+}
+i{
+    font-size: 20px;
+    margin: 0px 6px;
+    color: #085f63;
+}
+
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+    
+}
+.b1 button{
+    width: 200px;
+}
+
+.b2 button{
+    width: 200px;
+    
+}
+
+.page-content{
+    color: rgb(128, 128, 24);
+   
+}
+
+
+.separator{
+    margin: 3rem 0;
+    border-bottom: 1px dashed floralwhite;
+}
+.text-uppercase{
+    letter-spacing: 0.1rem;
+}
+.nav-link{
+    text-transform: capitalize;
+}
+.nav-link:hover{
+    background: #706e6e;
+}
+.text-primary{
+    color: #7579e7;
+}
+
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar
+{
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    padding: 0 !important;
+}
+.navbar-brand img{
+    height: 40px;
+    padding-left: 10px;
+}
+.navbar-nav li
+{
+    padding:  0 10px;
+}
+.navbar-nav li a
+{
+    color: rgb(238, 230, 230) !important;
+font-weight:700;
+float: right;
+text-align: left;
+}
+.datetime{
+    color: rgb(242, 248, 242);
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width: 170px;
+    font-weight: 700;
+    
+
+}
+.date{
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    
+}
+.time{
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    
+}
+    

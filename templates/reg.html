@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Student Registration</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/reg-style.css')}}">
+		<style>
+			body
+			{
+				background-image:url( "{{ url_for('static',filename='images/wave.png') }}" );	
+				background-position: center;
+				background-size: cover;
+				font-family: sans-serif;
+				margin-top: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="regform"><h1>Registration Form</h1></div>
+	    <div class="main">
+			<form name="reg" method="post" autocomplete="off">
+				{{ reform.hidden_tag() }}
+				<div id="name">
+					<h2 class="name">Name</h2>
+					{{ reform.fname(class="firstname") }}<br>
+					<label class="first">first name</label>
+					{{ reform.lname(class="lastname") }}<br>
+					<label class="last">last name</label>
+					
+				</div>
+				<h2 class="name">Roll Number</h2>
+				{{ reform.roll(class="rollnumber") }}<br>
+			
+				<h2 class="name">Password</h2>
+				{{ reform.pwd(class="password") }}<br>
+			
+				{% for error in reform.pwd.errors %}
+					<span class="error">{{error}}</span>
+				{% endfor %}
+			
+				<h2 class="name">Confirm Password</h2>
+				{{ reform.cpwd(class="password") }}<br>
+			
+				{% for error in reform.cpwd.errors %}
+					<span class="error">{{error}}</span>
+				{% endfor %}
+			
+				<h2 class="name">Email</h2>
+				{{ reform.user(class="email") }}<br>
+			
+				{% for error in reform.user.errors %}
+				<span class="error">{{error}}</span>
+				{% endfor %}
+			
+				<h2 class="name">Mobile Number</h2>
+				{{ reform.mob(class="number") }}<br>
+			
+				{% for error in reform.mob.errors %}
+				<span class="error">{{error}}</span>
+				{% endfor %}
+
+				<h2 class="name">Details</h2>
+				<select class="option" name="Year">
+					<option disabled="disabled" selected="selected">Choose Year</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>		
+				</select>
+				<select class="option" name="semester">
+					<option disabled="disabled" selected="selected">Choose Semester</option>
+					<option>1</option>
+					<option>2</option>
+				</select>
+
+				<h2 id="gender">Gender</h2>
+				<label class="radio">
+				<input   type="radio" id="male" name="gender" value="male">
+				Male
+			</label>
+			<label class="radio">
+				<input  type="radio" id="female" name="gender" value="female">
+				Female
+			</label>
+			<br/>
+			{{reform.submit(class="btn")}}<br/>
+
+
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,191 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+.regform{
+	width: 800px;
+	background-color: rgba(0,0,0,6);
+	margin: auto;
+	color: #ffffff;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+}
+
+.main{
+	background-color: rgba(0, 0,0, 0.3);
+	width: 800px;
+	margin: auto;
+}
+  form{
+	  padding: 10px;
+  }
+#name{
+	width: 100%;
+	height: 50px;
+}
+.name{
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 130px;
+	color: white;
+	font-size: 18px;
+	font-weight:650;
+}
+.firstname{
+	position: relative;
+	left: 200px;
+	top: -38px;
+	line-height: 30px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 15px;
+}
+.lastname{
+	position: relative;
+	left: 415px;
+	top: -73px;
+	line-height: 30px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 15px;
+	color: #555;
+}
+.firstlabel{
+	position: relative;
+	color: #e5e5e5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 203px;
+	top: -45px;
+}
+.first{
+	position: relative;
+	color: #e5e5e5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 203px;
+	top: -45px;
+}
+.last{
+	position: relative;
+	color: #e5e5e5;
+	text-transform: capitalize;
+	font-size: 14px;
+	left: 493px;
+	top: -72px;
+}
+.rollnumber{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width:  300px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.password{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width:  300px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.Confirmpassword{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width: 300px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.Email{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width:  300px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.number{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width:  300px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+.option{
+	position: relative;
+	left: 200px;
+	top: -36px;
+	line-height: 30px;
+	width:  275px;
+	height: 40px;
+	outline: none;
+	overflow: hidden;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+}
+#gender{
+	margin-left: 25px;
+	color: white;
+	margin-top: 25px;
+	font-size: 18px;
+}
+.radio{
+	
+	padding-right: 20px;
+	font-size: 20px;
+	margin-left: 200px;
+	margin-top: 20px;
+	color: white;
+}
+.radio input{
+	width: 18px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn{
+	background-color:rgb(219, 158, 43);
+	display: block;
+	margin-left: 250px;
+	margin-top: 15px;
+	text-align: center;
+	border-radius: 12px ;
+	border: 2px solid #366473;
+	padding: 14px 110px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition:width 25s;	
+}
+.btn:hover{
+	background-color:turquoise;
+}
+.error{
+	color:red;
+	}

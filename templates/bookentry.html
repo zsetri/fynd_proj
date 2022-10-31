@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>BOOK ENTRY</title>
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/bookentry.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{{url_for('static',filename='JS/bookentry.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+      </head>
+<body onload="initClock()">
+    
+   
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='prof/logo.jpg')}}"></a>
+          <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <p class="font-weight-normal text-muted "><div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>,
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minute">00</span>:
+                    <span id="seconds">00</span>-
+                    <span id="period">AM</span>
+                </div>
+                
+            </div></p>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/login/admin">Home</a>
+              </li>
+              
+                 <div class="container">
+                     <form action="#" method="get" id="search-form" target="_blank">        
+             <ul class="search-box">
+                  <button type="button"><i class="fa fa-microphone"></i></button>
+                  <input type="text" placeholder="Search...."/>
+                  <button type="submit"><i class="fa fa-search"></i></button>
+
+              </ul>
+              </form>
+</div>
+
+          
+          
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  More
+                </a>
+                <div class="dropdown-menu" style="background-color: #5f1782">
+                  <a class="dropdown-item"  href="/login/profile/stuprof">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+       
+    </div>
+</div>
+</div>
+
+
+      </nav>
+    
+  
+  
+<!--SIDEBAR-->
+               
+
+<!--page content-->
+
+<div class="page-content p-4" id="content">
+    <form class="needs-validation" method="post" autocomplete="off" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputBookID">Book ID</label>
+            <input type="text" class="form-control" id="inputBookID" name="inputBookID" placeholder="Book ID"  required>
+            <div class="valid-feedback">
+                valid
+            </div>
+          </div>
+          <div class="form-group col-md-8">
+            <label for="inputBookName">Book Name</label>
+            <input type="bookname" class="form-control" id="inputBookName" name="inputBookName" placeholder="Book Name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAuthor">Author</label>
+          <input type="text" class="form-control" id="inputAuthor" name="inputAuthor" placeholder="Name of the Author" required>
+        </div>
+        <div class="form-group">
+          <label for="inputPublication">Publication</label>
+          <input type="text" class="form-control" id="inputPublication" name="inputPublication" placeholder="Name of the Publication" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="input">Edition</label>
+            <input type="text" class="form-control" id="inputEdition" name="inputEdition" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputGenre">Genre</label>
+            <select id="inputGenre" name="inputGenre" class="form-control">
+                <option selected>Choose...</option>
+                <option>Almanacs & Yearbooks</option>
+                <option>Catalogs</option>
+                <option>Computers & Technology</option>
+                <option>Dictionaries</option>
+                <option>Encyclopedias</option>
+                <option>General</option>  
+                <option>Humanities</option>
+                <option>Politics & Social Sciences</option>
+                <option>Study Guides</option>
+                <option>Test Prep</option>
+                <option>Textbooks</option>
+                <option>Writing, Research & Publishing Guides</option>      
+                <option>Others...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputStatus">Book Status</label>
+            <select id="inputStatus" name="inputStatus" class="form-control">
+        <option selected>Select</option>
+        <option value="Available">Available</option>
+        <option value="Unavailable">Unavailable</option>
+      </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+            <label class="form-check-label" for="gridCheck">
+              All the above details are correct
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+
+    
+</body>
+</html>

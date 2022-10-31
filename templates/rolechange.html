@@ -1,0 +1,44 @@
+﻿{%extends "admin.html" %}
+{%block title%}ROLE CHANGE {%endblock%}
+
+<body>
+    {% block body %}
+    <form action="#" autocomplete="off" method="post" style="text-align:center;font-size:large;">
+        <center>
+            <table cellpadding="50" cellspacing="50" border="1" width="50%" style="text-align:center;">
+                <tr style="background-color:rgb(255, 216, 0);">
+                    <th>
+                        <label for="roll">ROLL NUMBER: </label>
+                    </th>
+
+                    <td>
+                        <br />
+                        
+                        <input type="text" name="id" placeholder="rollnumber" />
+                        <br />
+                        <br />
+
+                    </td>
+                </tr>
+                <tr style="background-color:rgb(255, 216, 0);">
+                    <th>
+                        <label for="role">ROLE: </label>
+                    </th>
+                    <td>
+                        
+                        <br />
+                        <input type="text" name="role" placeholder="set role" />
+                        <br />
+                        <br />
+
+                    </td>
+                </tr>
+
+            </table>
+            <br />
+            <button type="submit" value="submit">SUBMIT</button>
+        </center>
+    </form>
+
+    {% endblock %}
+</body>

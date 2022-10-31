@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Library management system</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/home-style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static',filename='JS/smooth-scroll.js')}}"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+      <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='home-images/logo.jpg')}}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item">
+       <a class="nav-link" href="#">BOOKS</a>
+     </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login" target="_self">LOGIN</a>
+                    </li>
+                <!--<li class="nav-item">
+            <a class="nav-link " href="#">FEEDBACK</a>
+                    </li>-->
+                </ul>
+            </div>
+          </nav>
+      </section>
+      <span><marquee><h2 style="font-size: medium;color: red;">All the Students are requested to submit the borrowed books before the due date to avoid penalty</h2></marquee></span>
+
+      <!------------banner section-->
+      <section id="banner">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                        <p class="promo-title">Welcome to Matrusri College!</p>
+                        <p class="subtitle"> Established in 2014, Matrusri college offers Bachelors courses for students and is known for its good infrastructure and education quality.</p>
+                          <a class= "btn btn-primary btn-md" href="https://matrusri.edu.in/"target="_blank" role="button">Learn more</a><br><br>
+                      </div>
+                      <div class="col-md-6 text center">
+                      <img src="{{url_for('static',filename='home-images/book.png')}}" class="img-fluid">
+                    </div> 
+                  </div>
+              </div>
+              <img src="{{url_for('static',filename='home-images/download.png')}}" class="bottom-img">        
+      </section>
+
+      <!-----------about---->
+      <section id="services">
+          <div class="container text-center">
+              <h1 class="title">MOTIVES OF LIBRARY</h1>
+              <div class="row text-center">
+                  <div class="col-md-4 services">
+                      <img src="{{url_for('static',filename='home-images/info.png')}}" class="service-img">
+                      <h4>About Library</h4>
+                      <p>A college library occupies a prominent position and it is an important and integral part of the teaching programme.
+                           It is not merely a depository of books, but an active workshop instrument in the production of or original thinking.
+                         libraries develop in each student a sense of responsibility in the pursuit of knowledge.
+                             College library stimulates the students to obtain, evaluate and recognize knowledge and to familiarize themselves with the trends of knowledge for further education and learning new disciplines.</p>
+                  </div>
+                  <div class="col-md-4 services">
+                    <img src="{{url_for('static',filename='home-images/obj.png')}}" class="service-img">
+                    <h4>Objectives</h4>
+                    <p>To provide resources necessary for research in the field of interest to the college.To help the teacher in keeping abreast of developments in his field;
+                        To provide library facilities and services necessary for the success of all formal programmes of the institution;
+                        To open the door to the worldwide of books that lie beyond the borders of one’s own field of specialization; and
+                        To bring books, students and scholars together under conditions, which encourage reading for pleasure, self-discovery, personal growth and sharpening of intellectual curiosity.</p>
+                  </div>
+                        <div class="col-md-4 services">
+                    <img src="{{url_for('static',filename='home-images/func.png')}}" class="service-img">
+                    <h4>Functions</h4>
+                    <p>To provide the opportunity for self-education to everyone.
+
+                         To provide modern trade business for the managerial people to adopt the training for the development of information.
+                        
+                        To provide up to date information to all.
+                
+                         To provide scientific knowledge.
+                        
+                        To provide biased and unbiased materials for the people.</p>
+                </div>
+              </div>
+          </div>
+      </section>
+      <!------footer---->
+      <section id="footer">
+          <img src="{{url_for('static',filename='home-images/wave.png')}}" class="footer-img">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 footer-box">
+                      <p><b>CONTACT US</b></p>
+                      <p><i class="fa fa-map-marker" ></i>
+                        Matrusri College , Hyderabad</p>
+                      <p><i class="fa fa-phone"></i>
+                      0123456789</p>
+                      <p><i class="fa fa-envelope"></i>matrusricollege@edu.in</p>
+                         </div>
+                         <div class="col-md-4 footer-box">
+                             <p><b>SUBCRIBE TO NEWSLETTER</b></p>
+                             <input type="email" class="form-control" placeholder="Your Email">
+                             <button type="button" class="btn btn-primary">SUBSCRIBE</button>
+                         </div>
+              </div>
+              <hr>
+              <p  class="copyright">Created for Project</p>
+          </div>
+      </section>
+      <!-----scrolling-->
+    
+    </body>
+</html>

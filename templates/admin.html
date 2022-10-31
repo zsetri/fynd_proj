@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>{% block title %} Admin Profile {% endblock %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/admin.css')}}">
+    <script src="{{url_for('static',filename='JS/admin.js')}}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body onload="initClock()">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='prof/logo.jpg')}}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login/admin">Home</a>
+                </li>
+
+                <div class="container">
+                    <form action="/login/admin/bk"  method="post" id="search-form" target="_self" autocomplete="off">
+                        <ul class="search-box">
+                            <button type="button"><a class="fa fa-microphone"  href="/login/admin/speech"></a></button>
+                            <input type="text" placeholder="Search by book id,name or author..." value="{{out}}" name="senddata">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+
+                        </ul>
+                    </form>
+                </div>
+
+
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Settings
+                    </a>
+                    <div class="dropdown-menu" style="background-color: #5f1782">
+                        <a class="dropdown-item" href="/login/profile/stuprof">Profile</a>
+                        <a class="dropdown-item" href="/logout">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!--SIDEBAR-->
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <div class="media d-flex align-items-centre">
+                <img src="{{url_for('static',filename='prof/profile.png')}}" alt="" width="80" height="80" class="mr-3 rounded-circle img-thumbail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0">Welcome Admin !</h4>
+                    <h4>{{usr}}</h4>
+                    <p class="font-weight-normal text-muted mb-0">
+                        <div class="datetime">
+                            <div class="date">
+                                <span id="dayname">Day</span>,
+                                <span id="month">Month</span>,
+                                <span id="daynum">00</span>,
+                                <span id="year">Year</span>
+                            </div>
+                            <div class="time">
+                                <span id="hour">00</span>:
+                                <span id="minute">00</span>:
+                                <span id="seconds">00</span>-
+                                <span id="period">AM</span>
+                            </div>
+
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Dashboard</p>
+        <ul class="nav flex-column bg-white mb-0">
+
+            <li class="nav-item">
+                <a href="/login/admin/sttable" class="navv-link text-dark ">
+                    <i class="fa fa-book mr-3 text-primary fa-fw"></i>
+                    Student Details
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/login/admin/bktable" class="navv-link text-dark ">
+                    <i class="fa fa-registered  mr-3 text-primary fa-fw"></i>
+                    Book Details
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/login/admin/bkissue" class="navv-link text-dark ">
+                    <i class="fa fa-money mr-3 text-primary fa-fw"></i>
+                    Book issue/return
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/login/admin/bkentry" class="navv-link text-dark ">
+                    <i class="fa fa-info mr-3 text-primary fa-fw"></i>
+                    Book Entry
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/login/admin/review" class="navv-link text-dark ">
+                    <i class="fa fa-info mr-3 text-primary fa-fw"></i>
+                    Feedback review
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/login/admin/fine" class="navv-link text-dark ">
+                    <i class="fa fa-money mr-3 text-primary fa-fw"></i>
+                    Fine
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/login/admin/rolech" target="_parent" class="navv-link text-dark ">
+                    <i class="fa fa-money mr-3 text-primary fa-fw"></i>
+                    Role change
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/login/admin/fineupdate" target="_parent" class="navv-link text-dark ">
+                    <i class="fa fa-money mr-3 text-primary fa-fw"></i>
+                    Fine Update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--page content-->
+    
+    <div class="page-content p-5" id="content">
+    {% with messages = get_flashed_messages() %}
+		{% if messages %}			
+		{% for message in messages %}
+	<h2>{{ message }} </h2>
+		{% endfor %}			
+		{% endif %}
+	{% endwith %}
+        {%block body%}        
+        {%endblock%}
+    </div>
+</body>
+</html>

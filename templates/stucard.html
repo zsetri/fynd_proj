@@ -1,0 +1,48 @@
+﻿<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>Profile Card</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/stucard.css')}}" type="text/css">
+    </head>
+<body style="background-color: mediumvioletred;">
+    {%block content%}
+    <div class="wrapper">
+        <div class="left">
+           <img src="{{url_for('static',filename='cimages/card.jpg')}}" style="width: 100%;height: 80%;"> 
+            <h4> {{nm}}</h4>
+            <p>{{roll}}</p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Your Info</h3>
+                <div class="info-data">
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p>{{us}}</p><br>
+                    </div>
+                    <div class="data">
+                        <h4>Contact</h4>
+                        <p>{{mob}}</p><br>
+                    </div>
+                    <div class="data">
+                        <h4>YEAR</h4>
+                        <p>{{yr}}</p><br>
+                    </div>
+                    <div class="data">
+                        <h4>SEM</h4>
+                        <p>{{sem}}</p><br>
+                    </div>
+                    <div class="data">
+                        <h4>ROLE</h4>
+                        <p>{{ro}}</p><br>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    {%endblock%}
+</body>
+</html>

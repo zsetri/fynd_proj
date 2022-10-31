@@ -1,0 +1,54 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: darkcyan;
+   
+}
+.feedback-form{
+    background:darkseagreen;
+    margin-top: 9px;
+    margin-bottom: 5px;
+}
+.feedback-form .form-control{
+    border-radius: 1rem;
+}
+.feedback-image{
+    text-align: center;
+}
+
+.feedback-image img{
+    border-radius: 6rem;
+    width: 10%;
+    
+    transform: rotate(29deg);
+}
+.feedback-form form{
+    padding: 3%;
+
+}
+.feedback-form  form .row{
+    margin-bottom: -2%;
+
+}
+.feedback-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: left;
+    color:black;
+}
+.feedback-form .btnfeedback{
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background:olivedrab    ;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}

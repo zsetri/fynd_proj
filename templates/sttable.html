@@ -1,0 +1,37 @@
+﻿{%extends "admin.html" %}
+{%block title%}Student Table{%endblock%}
+
+<body>
+    {% block body %}
+    <h1 style="text-align:center">STUDENT RECORDS</h1>
+    <center>
+        <table cellpadding="200" cellspacing="100" border="5px solid black" width="100%" style="text-align:center;background-color: white;color:black; column-width: 100px;">
+
+            <tr style="text-align:center">
+                <td>ID</td>
+                <td>FNAME</td>
+                <td>LNAME</td>
+                <td>USERNAME</td>
+                <td>MOBILE</td>
+                <td>YEAR</td>
+                <td>SEM</td>
+                <td>GENDER</td>
+            </tr>
+            {%for rec in s%}
+            <tr>
+                <td>{{rec[0]}}</td>
+                <td>{{rec[1]}}</td>
+                <td>{{rec[2]}}</td>
+                <td>{{rec[3]}}</td>
+                <td>{{rec[4]}}</td>
+                <td>{{rec[5]}}</td>
+                <td>{{rec[6]}}</td>
+                <td>{{rec[7]}}</td>
+            </tr>
+            {%endfor%}
+
+        </table>
+
+    </center>
+    {% endblock %}
+</body>

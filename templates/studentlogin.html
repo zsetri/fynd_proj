@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='CSS/student-style.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='JS/main.js')}}"></script>
+	<!--<script type="text/javascript" src="{{url_for('static',filename='JS/loginvalidate.js')}}"></script>-->
+	
+	</head>
+<body>
+	
+	<!---<img class="wave" src="images/bg1.jpg">--->
+	<div class="container">
+		<div class="img">
+			<img src="{{url_for('static',filename='images/book.png')}}">
+		</div>
+		<div class="login-content">
+			
+			<form name="login"   method="post" autocomplete="on">
+				
+				<img src="{{url_for('static',filename='images/profile.svg')}}">
+				<h2 class="title">Student Login</h2>
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}			
+				{% for message in messages %}
+				{{ message }}
+				{% endfor %}			
+				{% endif %}
+				{% endwith %}
+				<div class="input-div one ">
+					{{form.hidden_tag()}}
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<!-----<h5>Username</h5>---->
+						{{ form.user(class="input") }}
+						{% for error in form.user.errors %}
+						<span class="error">{{error}}</span>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="input-div pass ">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<!---<h5>Password</h5>---->
+						{{ form.pwd(class="input") }}
+						{% for error in form.pwd.errors %}
+						<span class="error">{{error}}</span>
+						{% endfor %}
+					</div>
+				</div>
+				<a href="/forgotpass">Forgot Password?</a>
+
+				{{form.submit(class="btn")}}<br>
+				<div class="sgnup">
+					<p>Are you a new user !   <a class="sgn" href="/signup" target="_self">Register here</a></p>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
