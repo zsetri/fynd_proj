@@ -46,7 +46,7 @@
                  <div class="container">
                      <form action="" method="" id="search-form" target="_blank">        
              <ul class="search-box">
-                  <button type="submit"><i class="fa fa-microphone"></i></button>
+                <!--  <button type="submit"><i class="fa fa-microphone"></i></button> -->
                   <input type="text" placeholder="Search...."/>
                   <button type="submit"><i class="fa fa-search"></i></button>
 
@@ -86,45 +86,53 @@
 
 <div class="page-content p-4" id="content">
         
-        <form class="needs-validation" action="/login/admin/bkissue/Issue" method="post" autocomplete="off" novalidate>
+        <form class="needs-validation" action="/login/admin/bkissue/Issue" method="post" autocomplete="off" validate>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputStudentId">Student ID</label>
-                <input type="text" class="form-control" id="inputStudentId" placeholder="Student Id" name="stid" required>
-                <div class="valid-feedback">
+                <input type="text" class="form-control" id="inputStudentId" placeholder="Student Id" name="stid" pattern="[0-9]{12}" required>
+               <!-- <div class="valid-feedback">
                     valid
-                </div>
+                </div> -->
               </div>
               
               <div class="form-group col-md-6 ">                         
                 <label for="inputStudentID">Book ID</label>                    
             <div class="input-group mb-3">
-                <input type="text" class="form-control" id="inputBookId" placeholder="Book ID" name="bookid" required>
-                <div class="valid-feedback">
+                <input type="number" class="form-control" id="inputBookId" placeholder="Book ID" name="bookid" min="1" max="999" required>
+              <!-- <div class="valid-feedback">
                     valid
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="startdate form-group col-md-4 ">
                 <label for="start">Start date :</label>
-                <input type="date" id="dp1" name="trip-start" value="" min="2021-01-01"  >              
+                <input type="date" id="dp1" name="trip-start" value="" min="2022-01-01"  required>              
             </div>  
             <div class="enddate form-group col-md-6 ">
                 <label for="start">End date :</label>
-                <input type="date" id="dp1" name="trip-end" value="" min="2021-01-01"  >              
+                <input type="date" id="dp1" name="trip-end" value="" min="2022-01-01" required>
+                           
             </div>   
           
               <div class="b1 form-group col-md-4">
-            <input type="submit" class="btn btn-danger" name="Issue" value="Issue"required >
+            <input type="submit" class="btn btn-danger" name="Issue" value="Issue" required >
             </div>
             <div class="b2 form-group col-md-4">
               <input type="submit" class="btn btn-info" name="Return" value="Return" formaction="/login/admin/bkissue/Return" required>
               </div>
 
           </form>
-          
-          
-      </div>
-
+        <br/>
+        <div class="b1 form-group col-md-4">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}			
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}			
+      {% endif %}
+      {% endwith %}
+    </div>
+      </div> 
     </body>    
 </html>

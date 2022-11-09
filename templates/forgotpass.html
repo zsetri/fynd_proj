@@ -18,6 +18,13 @@
                 <img src="{{url_for('static',filename='images/profile.svg')}}">
                 {{fform.hidden_tag()}}
                 <h2 class="title">PASSWORD RESET</h2>
+                {% with messages = get_flashed_messages() %}
+				{% if messages %}			
+				{% for message in messages %}
+				{{ message }}
+				{% endfor %}			
+				{% endif %}
+				{% endwith %}
                 <div class="input-div one ">
                     <div class="i">
                         <i class="fas fa-user"></i>

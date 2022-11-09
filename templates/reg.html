@@ -29,6 +29,10 @@
 				</div>
 				<h2 class="name">Roll Number</h2>
 				{{ reform.roll(class="rollnumber") }}<br>
+
+				{% for error in reform.roll.errors %}
+				<span class="error">{{error}}</span>
+				{% endfor %}
 			
 				<h2 class="name">Password</h2>
 				{{ reform.pwd(class="password") }}<br>
@@ -60,21 +64,21 @@
 
 				<h2 class="name">Details</h2>
 				<select class="option" name="Year">
-					<option disabled="disabled" selected="selected">Choose Year</option>
+				<!--	<option disabled="disabled" selected="selected">Choose Year</option> -->
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
 					<option>4</option>		
 				</select>
 				<select class="option" name="semester">
-					<option disabled="disabled" selected="selected">Choose Semester</option>
+				<!--	<option disabled="disabled" selected="selected">Choose Semester</option> -->
 					<option>1</option>
 					<option>2</option>
 				</select>
 
 				<h2 id="gender">Gender</h2>
 				<label class="radio">
-				<input   type="radio" id="male" name="gender" value="male">
+				<input checked type="radio" id="male" name="gender" value="male">
 				Male
 			</label>
 			<label class="radio">
